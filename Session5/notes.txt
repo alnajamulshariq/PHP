@@ -1,0 +1,87 @@
+form handling in php 
+
+action:where togo
+method:get and post
+
+get method: 
+will generate query string in url to pass data..
+we can access data in current page or anyother page .
+
+from.php
+
+ <form action="form.php" method="get">
+        <label for="">NAME</label>
+        <input type="text" name="name" id="">
+        <br><br>
+        <label for="">AGE</label>
+        <input type="text" name="age" id="">
+        <br><br>
+        <label for="">EMAIL</label>
+        <input type="email" name="email" id="">
+        <br><br>
+        <label for="">CITY</label>
+        <input type="text" name="city" id="">
+        <br><br>
+        <label for="">GENDER:</label>
+
+        <label for="">male</label>
+      <input type="radio" name="gender" value="male">
+        <label for="">female</label>
+       <input type="radio" name="gender" value="female">
+        <br><br>
+
+        <input type="submit" value="submit" name="submitbtn">
+
+
+    </form>
+
+run and check in url..
+
+now we are going to access data using php...
+
+<?php
+
+    $name=$_GET['name'];
+    $age=$_GET['age'];
+    $email=$_GET['email'];
+    $city=$_GET['city'];
+    $gender=$_GET['gender'];
+
+    echo "your name is :".$name."<br>";
+    echo "your age is :".$age."<br>";
+    echo "your email is :".$email."<br>";
+    echo "your city is :".$city."<br>";
+    echo "your gender is :".$gender."<br>";
+
+    ?>
+
+now run...
+it will show undefine variables...
+so now we will apply if condition...
+
+ <?php
+
+    if(isset($_GET['submitbtn']))
+    {
+
+        $name=$_GET['name'];
+        $age=$_GET['age'];
+        $email=$_GET['email'];
+        $city=$_GET['city'];
+        $gender=$_GET['gender'];
+    
+        echo "your name is :".$name."<br>";
+        echo "your age is :".$age."<br>";
+        echo "your email is :".$email."<br>";
+        echo "your city is :".$city."<br>";
+        echo "your gender is :".$gender."<br>";
+
+    }
+
+   
+
+    ?>
+
+
+
+

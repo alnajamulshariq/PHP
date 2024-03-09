@@ -1,0 +1,126 @@
+php basic syntax
+
+<?   php echo "hello world!"    ?>
+
+to run..
+http://localhost/PR2-202306B/SESSION1/
+
+php data types and strings
+
+---------------------------
+session 3
+
+php data types and strings:
+
+integer,float,string,boolean
+
+datatypes classification in php:
+
+scalar data type
+1.boolean
+2.integer
+3.float
+4.string
+
+compound data type:
+1.array
+2.object
+
+special data type:
+1.null 
+2.resource
+
+converting other data type into float:
+
+
+**************
+data types
+strings
+numbers
+constants
+operators
+---------------------------
+
+---------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+    
+    echo "hello world!"."<br>";
+    echo "hello world!" ."<br>";
+
+    // variables in php
+   
+    // integer
+    $x=5;
+    $y=1.90411;
+    // it will return data type
+    var_dump($x);
+    var_dump($y);
+    // is_int().. it will return either true or false
+    var_dump(is_int($x));
+
+    echo $x;
+    echo("<br>");
+    echo $y;
+    echo("<br>");
+
+
+     // float
+    
+     $a=2.4;
+     var_dump(is_int($a));
+     // echo("this is amazing"." "."my hobby is teaching");
+     echo("<br>");
+     echo $a;
+ 
+     // 
+
+
+    // string
+    $text="pakistan"."<br>";
+    echo $text;
+    echo("<br>");
+
+    // strlen() will return string length
+   
+    $my=strlen("pakistanzindabaad");
+    echo("<br>");
+    echo $my;
+
+    // str-word-count() will return how many words..
+
+    echo("<br>");
+    $word=str_word_count("this is amazing"."my hobby is teaching");
+    echo $word;
+
+
+
+    // string reverse will return reverse values..
+
+    echo strrev("pakistan");
+    echo ("<br>");
+
+
+    // string reverse will return reverse values..
+
+    echo strpos("hello world","o");
+    echo ("<br>");
+
+     // string reverse will return reverse values..
+
+     echo str_replace("hello","karachi","hello pakistan");
+     echo ("<br>");
+     echo("<br>");
+    ?>
+</body>
+</html>
+---------------------------

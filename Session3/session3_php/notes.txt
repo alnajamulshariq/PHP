@@ -1,0 +1,57 @@
+------loops and arrays in php-------
+
+$item:
+counter variable just like i in for while and do  while loop
+
+ <?php
+
+    //array declaration method 1
+
+    //array with string values
+    $array1=array("hamza","ali","shakir","bin-kafeel");
+    echo $myarray1 [2];
+    echo $myarray1 [2]."<br>".$myarray1 [1];
+
+    //array declaration method 2
+
+    //array with integer values
+    $array2[0]=10;
+    $array2[1]=20;
+    $array2[2]=30;
+    $array2[3]=40;
+    $array2[4]=50;
+
+    echo $array2[2];
+
+    //array with multiple values:
+    $array3=array("string1",10,"string2",20,30,"string3");
+    echo $array3[4];
+
+    //array with foreach loop
+
+    $array3=array("string1",10,"string2",20,30,"string3");
+
+    //array with foreach loop
+    foreach($array3 as $items){
+
+        echo $items."<br>";
+
+    }
+
+    //array with for loop
+
+    $array3=array("string1",10,"string2",20,30,"string3");
+    $arry3_lenght=count($array3);
+
+    for($i=0; $i<$arry3_lenght; $i++){
+
+        echo $array3[$i]."<br>";
+
+    }
+
+
+
+
+
+    ?>
+

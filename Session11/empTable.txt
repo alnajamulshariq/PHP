@@ -1,0 +1,9 @@
+CREATE TABLE emp_tbl (
+	id int,
+    name varchar(50),
+    age int,
+    email varchar(70),
+    designation varchar(40),
+    salary int,
+    city varchar(40)
+);

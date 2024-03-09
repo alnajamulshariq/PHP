@@ -1,0 +1,92 @@
+----------form handling in php part2--------
+
+how to retrieve data from one form to another
+
+create form2.php and just copy past this code:
+
+if(isset($_GET['submitbtn']))
+    {
+
+        $name=$_GET['name'];
+        $age=$_GET['age'];
+        $email=$_GET['email'];
+        $city=$_GET['city'];
+        $gender=$_GET['gender'];
+    
+        echo "your name is :".$name."<br>";
+        echo "your age is :".$age."<br>";
+        echo "your email is :".$email."<br>";
+        echo "your city is :".$city."<br>";
+        echo "your gender is :".$gender."<br>";
+
+    }
+
+
+now just put new file name inside form action attribute:
+
+ <form action="form2.php" method="get">
+
+now run...
+
+when we want to reterieve data from one page to more pages we will do this by
+using sessions..
+
+now u can use post method too...
+
+<form action="form2.php" method="post">
+
+$_GET and we will use $_POST
+
+NOW ANOTHER EXAMPLE OF GET AND POST...
+
+addition of  two values
+
+ <form action="form1.php" method="post">
+        <label for="">ENTER FIRST VALUE</label>
+        <input type="text" name="value1" id="">
+        <br><br>
+     
+        <label for="">ENTER SECOND VALUE</label>
+        <input type="text" name="value2" id="">
+        <br><br>
+
+        <input type="submit" value="ADDITION" name="addbtn">
+    </form>
+
+
+<?php
+
+    if(isset($_POST['addbtn']))
+    {
+       $num1=$_POST['value1'];
+       $num2=$_POST['value2'];
+
+       $result=$num1+$num2;
+
+       echo"<h1> Addtion is:".$result."</h>";
+    }
+?>
+
+now run..
+
+now we are working on validation..so for that we will use if-else conditions
+
+if (isset($_POST['addbtn'])) {
+        if ($_POST['value1'] != "" && $_POST['value2']) {
+
+            $num1 = $_POST['value1'];
+            $num2 = $_POST['value2'];
+
+            $result = $num1 + $num2;
+
+            echo "<h1> Addtion is:" . $result . "</h>";
+        }
+        else{
+            echo "<h2>please fill both fields</h2>";
+        }
+    }
+
+now run...
+
+now see slides for theory attached with this mail...
+

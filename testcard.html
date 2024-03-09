@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Employee Details</title>
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+.profile-card:hover{
+    background-color: #ebe1e1ec;
+    box-shadow: 0 2px 4px #ebe1e1ec(0, 0, 2px, 0.3);
+    transition: 0.3s;
+}
+.profile-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-value {
+    font-weight: bold;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h1 class="profile-title">Employee Details</h1>
+        <div class="profile-info">
+            <p><strong>ID:</strong> <span class="profile-value"></span></p>
+            <p><strong>Name:</strong> <span class="profile-value"></span></p>
+            <p><strong>Age:</strong> <span class="profile-value"></span></p>
+            <p><strong>Email:</strong> <span class="profile-value"></span></p>
+            <p><strong>Designation:</strong> <span class="profile-value"></span></p>
+            <p><strong>Salary:</strong> <span class="profile-value"></span></p>
+            <p><strong>City:</strong> <span class="profile-value"></span></p>
+        </div>
+    </div>
+</body>
+</html>

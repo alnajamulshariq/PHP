@@ -1,0 +1,125 @@
+PHP PROJECT VACCINATION SYSTEM MANAGEMENT:
+
+1- CREATE DATABASE IN MYSQL
+
+CREATE DATABASE shariq_vsm;
+
+2- CREATE TABLES IN OUR DATABASE shariq_vsm:
+
+
+
+i- create admin table:
+
+CREATE TABLE admin_tbl (
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(50),
+    email varchar(60),
+    password varchar(60),
+    image varchar(350)
+);
+
+INSERT INTO admin_tbl (name, email, password) VALUES
+("Admin", "Admin@gmail.com", "admin123");
+
+NOTE: ADMIN table main lazmi 1 value insert karwani hoti hai.
+
+
+
+ii- create hospital table:
+
+CREATE TABLE hospital_tbl (
+id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(60),
+    contact varchar(20),
+    cid int,
+    email varchar(60),
+    password varchar(60),
+    image varchar(350),
+    address varchar(200),
+    status varchar(20)
+);
+
+NOTE: STATUS main manually ja kar by default k column main As default ko select kar k wahan "deactive" likh den ge.
+
+
+
+
+iii- create patient table:
+
+CREATE TABLE patient_tbl(
+id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(60),
+    contact varchar(20),
+    cid int,
+    email varchar(60),
+    password varchar(60),
+    address varchar(200),
+    image varchar(350),
+    gender varchar(15),
+    status varchar(20)
+);
+
+NOTE: STATUS main manually ja kar by default k column main As default ko select kar k wahan "active" likh den ge.
+
+
+
+
+iv- create vaccination table:
+
+CREATE TABLE vaccine_tbl(
+id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(60),
+    status varchar(20)
+);
+
+NOTE: STATUS main manually ja kar by default k column main As default ko select kar k wahan "available" likh den ge.
+
+
+
+
+v- create appointment table:
+
+CREATE TABLE appointment_tbl(
+id int PRIMARY KEY AUTO_INCREMENT,
+    p_id int,
+    h_id int,
+    date varchar(20),
+    time varchar(20),
+    v_id int,
+    status varchar(20)
+);
+
+NOTE: STATUS main manually ja kar by default k column main As default ko select kar k wahan "pending" likh den ge.
+
+
+vi- create test table:
+
+CREATE TABLE test_tbl(
+id int PRIMARY KEY AUTO_INCREMENT,
+    p_id int,
+    h_id int,
+    date varchar(20),
+    time varchar(20),
+    result varchar(20)
+);
+
+NOTE: RESULT main manually ja kar by default k column main As default ko select kar k wahan "process" likh den ge.
+
+
+
+vii- create feedback table:
+
+CREATE TABLE feedback_tbl(
+id int PRIMARY KEY AUTO_INCREMENT,
+    p_id int,
+    message varchar(300)
+);
+
+
+
+viii- create city table:
+
+CREATE TABLE city_tbl(
+id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(60)
+); 

@@ -167,7 +167,9 @@ session_start();
             window.location.href='index.php';
             </script>";
         } else {
-            echo "Login Failed";
+            echo "<script>
+            alert('Login Failed');
+            </script>";
         }
     }
 

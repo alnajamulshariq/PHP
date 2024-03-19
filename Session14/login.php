@@ -22,16 +22,18 @@ session_start();
 
         body {
             font-family: 'Times New Roman', Times, serif;
-            background-image: url("covid.jpg");
+            background-image: url('assets/bg5.jpg');
+            background-size: 100% 100%;
         }
 
         /* Center the login page vertically and horizontally */
         .login-page {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #eee;
+            /* background-color: #eee; */
         }
 
         /* Style the login form container */
@@ -112,6 +114,13 @@ session_start();
             background-color: #0056b3;
         }
 
+        h1 {
+            letter-spacing: 2.4px;
+            transform: translateY(-30px);
+            font-weight: bold;
+            color: cadetblue;
+        }
+
 
         /* Style the "Not registered?" link */
         /* .message {
@@ -132,13 +141,17 @@ session_start();
 </head>
 
 <body>
+
+
+
     <div class="container-fluid p-0 m-0">
         <div class="login-page">
+            <h1 class="text-center">Vaccination Management System</h1>
             <div class="form">
                 <div class="login">
                     <div class="login-header">
                         <h3>ADMIN LOGIN</h3>
-                        <p>Please enter your credentials to login.</p>
+                        <p>Please enter your credentials to login</p>
                     </div>
                 </div>
                 <form action="" method="post" class="login-form">
@@ -164,12 +177,12 @@ session_start();
             $_SESSION['admin_session'] = $row['id'];
 
             echo "<script>
-            alert('You Are Login Successfully');
-            window.location.href='index.php';
+                alert('You Are Login Successfully');
+                window.location.href = 'index.php';
             </script>";
         } else {
             echo "<script>
-            alert('Login Failed');
+                alert('Login Failed');
             </script>";
         }
     }

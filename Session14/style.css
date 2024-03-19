@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #12171e;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active~.main-content {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+
+
+/* .user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+.sidebar.sidebar.active p {
+    opacity: 1;
+} */
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff;
+    color: #12171e;
+}
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    /* background-color: #eee; */
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+
+.admin_pic {
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.pic_text {
+    display: flex;
+    flex-direction: column;
+    line-height: 15px;
+}
+
+.pic_text p {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.admin_name {
+    margin-right: 10px;
+}
+
+
+.dash_disp {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+
+}
+
+.patient {
+    text-align: center;
+}
+
+.patient p {
+    color: #6b6b6b;
+}
+
+.hospital {
+    text-align: center;
+}
+
+.hospital p {
+    color: #6b6b6b;
+}
+
+.appointments {
+    text-align: center;
+}
+
+.appointments p {
+    color: #6b6b6b;
+}
+
+.covidtest {
+    text-align: center;
+}
+
+.covidtest p {
+    color: #6b6b6b;
+}
+
+
+/* here we design our profile page  */
+
+.profile_upper_sec {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin_pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic_text p {
+    text-align: center;
+}
+
+/* profile form  */
+/* .heading {
+    text-align: center;
+    transform: translateY(-30px);
+    letter-spacing: 2.5px;
+} */
+
+.profile_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileForm {
+    background-color: #12171e;
+    height: 450px;
+    width: 475px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.updateTitle {
+    margin-top: 25px;
+}
+
+.updateTitle h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.updateTitle p {
+    text-align: center;
+    color: #fff;
+}
+
+.profileData {
+    margin-top: 10px;
+}

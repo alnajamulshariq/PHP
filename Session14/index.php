@@ -9,6 +9,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('assets/bg5.jpg');
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -95,7 +102,7 @@
 
 
             <li>
-                <a href="">
+                <a href="logout.php">
                     <i class="bx bx-log-out"></i>
                     <span class="nav-item">Sign&nbsp;Out</span>
                 </a>
@@ -107,20 +114,39 @@
     </div>
 
     <div class="main-content">
-        <div class="admin_pic">
 
-            <img src="admin.jpg" alt="me" class="user-img">
-            <!-- <div class="pic_text">
+
+
+
+        <div class="profile_upper_sec">
+
+            <div class="admin_pic">
+                <a href="profile.php">
+                    <img src="./assets/admin.jpg" alt="me" class="user-img">
+                </a>
+                <div class="pic_text">
+                    <p class="bold">M. Shariq</p>
+                    <p>Admin</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- <div class="profile_upper_sec">
+
+            <div class="admin_pic">
+                <a href="profile.php">
+                    <img src="./assets/admin.jpg" alt="me" class="user-img">
+                </a>
+
+            </div>
+
+            <div class="pic_text">
                 <p class="bold">M. Shariq</p>
                 <p>Admin</p>
-            </div> -->
-
-        </div>
-
-        <div class="pic_text">
-            <p class="bold">M. Shariq</p>
-            <p class="admin_name">Admin</p>
-        </div>
+            </div>
+        </div> -->
 
         <div class="dash_disp">
 
@@ -154,7 +180,7 @@
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
 
-    btn.onclick = function () {
+    btn.onclick = function() {
         sidebar.classList.toggle('active');
     };
 </script>

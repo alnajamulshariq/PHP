@@ -272,7 +272,7 @@ $row = mysqli_fetch_assoc($result);
 
                 <?php
                 echo "<a href='addHospital.php'><button class='addNewHospital'><i id='addHospIcon' class='bx bx-plus'></i>Hospital</button></a>
-            " ?>;
+            " ?>
 
 
 
